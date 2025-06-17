@@ -44,9 +44,11 @@ async function carregarEmprestimos() {
   emprestimos.forEach(e => {
     const li = document.createElement('li');
     li.className = 'bg-white p-4 rounded shadow flex justify-between items-center';
+    console.log(e);
+    console.log(livros);
 
     const usuario = usuarios.find(u => u.id === e.usuarioId);
-    const livro = livros.find(l => l.id === e.livroId);
+    const livro = livros.find(l => l.id === Number(e.livroId));
     const devolvido = !!e.dataDevolucao;
 
     li.innerHTML = `

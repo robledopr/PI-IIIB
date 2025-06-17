@@ -22,14 +22,10 @@ async function carregarUsuarios() {
     btn.textContent = 'Excluir';
     btn.className = 'bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600';
     btn.onclick = async () => {
-    const usuarioLogado = JSON.parse(localStorage.getItem('usuario'));
-
     await fetch(`http://localhost:3000/usuarios/${usuario.id}`, {
-    method: 'DELETE',
-    headers: {
-      'x-tipo-usuario': usuarioLogado?.tipo
-    }
-  });
+    method: 'DELETE'
+    });
+
 
       carregarUsuarios();
     };

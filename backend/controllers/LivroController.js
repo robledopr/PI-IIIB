@@ -2,18 +2,10 @@ const Livro = require('../models/Livro');
 const repo = require('../repositories/LivroRepository');
 
 class LivroController {
-  listar() {
-    return repo.getAll();
+  listar() { return repo.getAll(); }
+  adicionar(t, a, y) {
+    return repo.add(new Livro(null, t, a, y));
   }
-
-  adicionar(titulo, autor, ano, ISBN) {
-    const novo = new Livro(null, titulo, autor, ano, ISBN);
-    return repo.add(novo);
-  }
-
-  deletar(id) {
-    repo.delete(id);
-  }
+  deletar(id) { repo.delete(id); }
 }
-
 module.exports = new LivroController();

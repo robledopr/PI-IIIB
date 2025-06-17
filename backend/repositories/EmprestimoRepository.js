@@ -1,53 +1,32 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'), path = require('path');
 const Emprestimo = require('../models/Emprestimo');
-
 const FILE = path.join(__dirname, '../data/emprestimos.json');
 
 class EmprestimoRepository {
   constructor() {
-    this.emprestimos = this._carregar();
-    this.nextId = this._getNextId();
+    this.emprestimos = this._load();
+    this.nextId = this._nextId();
   }
-
-  _carregar() {
-    if (fs.existsSync(FILE)) {
-      const data = fs.readFileSync(FILE, 'utf-8');
-      return JSON.parse(data);
-    }
-    return [];
+  _load() {
+    return fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE)) : [];
   }
-
-  _salvar() {
-    fs.writeFileSync(FILE, JSON.stringify(this.emprestimos, null, 2));
+  _save() {
+    fs.writeFileSync(FILE, JSON.stringify(this.emprestimos, null,2));
   }
-
-  _getNextId() {
-    return this.emprestimos.length ? Math.max(...this.emprestimos.map(e => e.id)) + 1 : 1;
+  _nextId() {
+    return this.emprestimos.length ? Math.max(...this.emprestimos.map(e=>e.id))+1 : 1;
   }
-
-  getAll() {
-    return this.emprestimos;
+  getAll() { return this.emprestimos; }
+  getById(id) { return this.emprestimos.find(e=>e.id===id); }
+  add(e) {
+    e.id = this.nextId++;
+    this.emprestimos.push(e);
+    this._save();
+    return e;
   }
-
-  getById(id) {
-    return this.emprestimos.find(e => e.id === id);
-  }
-
-  add(emprestimo) {
-    emprestimo.id = this.nextId++;
-    this.emprestimos.push(emprestimo);
-    this._salvar();
-    return emprestimo;
-  }
-
-  update(emprestimo) {
-    const index = this.emprestimos.findIndex(e => e.id === emprestimo.id);
-    if (index !== -1) {
-      this.emprestimos[index] = emprestimo;
-      this._salvar();
-    }
+  update(e) {
+    const idx = this.emprestimos.findIndex(x=>x.id===e.id);
+    if(idx>=0){ this.emprestimos[idx]=e; this._save(); }
   }
 }
-
 module.exports = new EmprestimoRepository();

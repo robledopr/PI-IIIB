@@ -18,5 +18,10 @@
     "id": 4,
     "nome": "Admin Teste",
     "email": "admin@biblioteca.com"
+  },
+  {
+    "id": 5,
+    "nome": "Admin Teste",
+    "email": "admin@biblioteca.com"
   }
 ]

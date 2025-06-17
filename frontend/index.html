@@ -13,22 +13,6 @@
     <a href="usuarios.html" class="block bg-white border border-green-500 text-green-600 px-6 py-3 rounded shadow hover:bg-green-50">👤 Gerenciar Usuários</a>
     <a href="emprestimos.html" class="block bg-white border border-purple-500 text-purple-600 px-6 py-3 rounded shadow hover:bg-purple-50">🔁 Gerenciar Empréstimos</a>
   </div>
-  <!-- Dentro do body -->
-<div id="saudacao" class="mb-6 text-right text-sm text-gray-600"></div>
-<script>
-  const user = JSON.parse(localStorage.getItem('usuario'));
-  const saudacao = document.getElementById('saudacao');
-  if (user) {
-    saudacao.innerHTML = `Olá, <strong>${user.nome}</strong> (${user.tipo}) - <a href="#" onclick="logout()" class="text-red-500 hover:underline">Sair</a>`;
-  } else {
-    window.location.href = 'login.html';
-  }
-
-  function logout() {
-    localStorage.removeItem('usuario');
-    window.location.href = 'login.html';
-  }
-</script>
 
 </body>
 </html>

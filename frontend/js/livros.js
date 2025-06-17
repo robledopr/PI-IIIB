@@ -27,12 +27,10 @@ async function carregarLivros() {
     btn.onclick = async () => {
       const usuarioLogado = JSON.parse(localStorage.getItem('usuario'));
 
-    await fetch(`${API}/${livro.id}`, {
-    method: 'DELETE',
-    headers: {
-    'x-tipo-usuario': usuarioLogado?.tipo
-    }
+      await fetch(`${API}/${livro.id}`, {
+      method: 'DELETE'
     });
+
 
       carregarLivros();
     };

@@ -18,6 +18,20 @@
     "livroId": 2,
     "usuarioId": 1,
     "dataEmprestimo": "2025-06-17T16:44:31.539Z",
-    "dataDevolucao": null
+    "dataDevolucao": "2025-06-17T21:03:35.034Z"
+  },
+  {
+    "id": 4,
+    "livroId": 3,
+    "usuarioId": 3,
+    "dataEmprestimo": "2025-06-17T21:03:33.558Z",
+    "dataDevolucao": "2025-06-17T21:03:36.007Z"
+  },
+  {
+    "id": 5,
+    "livroId": 6,
+    "usuarioId": 3,
+    "dataEmprestimo": "2025-06-17T23:33:56.811Z",
+    "dataDevolucao": "2025-06-17T23:34:15.831Z"
   }
 ]
