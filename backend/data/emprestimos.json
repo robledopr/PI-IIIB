@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "livroId": 2,
+    "usuarioId": 2,
+    "dataEmprestimo": "2025-06-17T16:43:38.482Z",
+    "dataDevolucao": "2025-06-17T16:44:16.850Z"
+  },
+  {
+    "id": 2,
+    "livroId": 3,
+    "usuarioId": 1,
+    "dataEmprestimo": "2025-06-17T16:43:54.900Z",
+    "dataDevolucao": "2025-06-17T16:44:25.077Z"
+  },
+  {
+    "id": 3,
+    "livroId": 2,
+    "usuarioId": 1,
+    "dataEmprestimo": "2025-06-17T16:44:31.539Z",
+    "dataDevolucao": null
+  }
+]

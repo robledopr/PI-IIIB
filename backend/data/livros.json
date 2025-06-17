@@ -1,0 +1,18 @@
+[
+  {
+    "id": 2,
+    "titulo": "Teste 1",
+    "autor": "Teste 1",
+    "ano": "2010",
+    "ISBN": "Teste 1",
+    "disponivel": false
+  },
+  {
+    "id": 3,
+    "titulo": "Teste 2",
+    "autor": "Teste 2",
+    "ano": "2011",
+    "ISBN": "Teste 2",
+    "disponivel": true
+  }
+]

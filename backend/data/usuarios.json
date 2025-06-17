@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nome": "Usuario 1",
+    "email": "u1@gmail.com"
+  },
+  {
+    "id": 2,
+    "nome": "u2",
+    "email": "u2@gmail.com"
+  },
+  {
+    "id": 3,
+    "nome": "Robledo Pereira da Rosa",
+    "email": "rpdrosa@inf.ufpel.edu.br"
+  },
+  {
+    "id": 4,
+    "nome": "Admin Teste",
+    "email": "admin@biblioteca.com"
+  }
+]
