@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 1,
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "ano": 1899,
+    "ISBN": "1234567890",
+    "disponivel": true
+  },
+  {
+    "id": 2,
+    "titulo": "1",
+    "autor": "1",
+    "ano": "1",
+    "ISBN": "1",
+    "disponivel": true
+  },
+  {
+    "id": 3,
+    "titulo": "asasda",
+    "autor": "adsad",
+    "ano": "11",
+    "ISBN": "11",
+    "disponivel": true
+  }
+]
