@@ -53,7 +53,7 @@ form.onsubmit = async (e) => {
   await fetch(API, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ titulo, autor, ano, isbn }),
+    body: JSON.stringify({ titulo, autor, ano, ISBN: isbn }),
   });
 
   form.reset();
